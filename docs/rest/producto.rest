@@ -1,0 +1,16 @@
+### listar productos
+GET http://localhost:3000/producto
+
+### crear producto
+POST http://localhost:3000/producto
+Content-Type: application/json
+
+{
+    "nombre": "Mouse Gammer",
+    "precio": "160",
+    "stock":13,
+    "categoriaId":1
+}
+
+### busqueda por nombre
+GET http://localhost:3000/producto/back?page=1&q=mm&sort=asc

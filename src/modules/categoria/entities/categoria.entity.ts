@@ -1,16 +1,17 @@
 import {Producto} from "../../producto/entities/producto.entity";
-import {Column ,Entity, OneToOne, PrimaryGeneratedColumn} from "typeorm";
+import {Column ,Entity, OneToMany, OneToOne, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
 export class Categoria {
     @PrimaryGeneratedColumn()
     id:number;
-    @Column()
+
+    @Column({type: 'varchar', length:50})
     nombre:string;
 
-    @Column()
+    @Column({type:'text', nullable:true})
     detalle:string;
 
-    @OneToOne(()=>Producto,(prod)=>prod.categoria)
+    @OneToMany(()=>Producto, (prod)=>prod.categoria)
     producto:Producto[]
 }

@@ -5,14 +5,14 @@ export class User {
     @PrimaryGeneratedColumn()
     id:number;
 
-    @Column()
+    @Column({type:'varchar', length:50})
     name:string;
 
-    @Column()
-    mail:string;
+    @Column({type:'varchar', length: 255,unique:true})
+    email:string;
     
     
-    @Column()
+    @Column({type:'varchar', length:200})
     password:string;
 
     @OneToOne(()=>Persona, persona=>persona.user,{cascade:true})

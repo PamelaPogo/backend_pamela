@@ -13,6 +13,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   // swagger
   const config = new DocumentBuilder()
+  .addBearerAuth()
   .setTitle('Product example')
   .setDescription('The Produc API description')
   .setVersion('1.0')

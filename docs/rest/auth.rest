@@ -1,13 +1,13 @@
+### registro de usuario
 
 POST http://127.0.0.1:3000/auth/register
 Content-Type: application/json
 
 {
     "name":"prueba",
-    "email": "prueba@email.com",
-    "password":"12345678"
+    "email": "pr@hm.com",
+    "password":"123456"
 
-    
 }
 
 ### login  sin conexion a BD
@@ -17,12 +17,12 @@ Content-Type: application/json
 
 {
     "name":"prueba2",
-    "email": "prueba2@email.com",
-    "password": "1234657"
+    "email": "pr@hm.com",
+    "password": "123456"
     
 }
 
 ### users
 
 GET http://127.0.0.1:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MzEzNjA1NTYsImV4cCI6MTczMTM2MDYxNn0.UE-jhqOExdpLhL9iQqfArfll20hZCj-20RzD3-_H9qQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MzQyNzA4NDQsImV4cCI6MTczNDI3MTcyNH0.Dsm02M9DoS_sp7pwV7-5ZBa87U5hCJ60WjNgUv5Llts
